@@ -1,0 +1,7 @@
+$ git clone ...
+
+$ git branch -v -a
+
+choose your branch
+
+$ git switch <branch_name>

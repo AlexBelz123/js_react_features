@@ -1,0 +1,26 @@
+$ git add .
+$ git stash
+$ git stash pop
+
+Example:
+
+# main
+    - some local changes
+
+# primary
+
+And you wanna move them to another branch (let's say primary branch)
+
+On branch main write:
+$ git add .
+$ git stash
+
+Then checkout on primary branch and run:
+    - git stash pop
+
+Now primary looks loke this:
+#primary
+    - local changes
+
+And main looks liks this
+    #main (no local changes)

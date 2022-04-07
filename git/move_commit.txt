@@ -1,0 +1,33 @@
+*CHERRY-PICK*----------------------
+
+- move commit to another branch
+
+$ git cherry-pick [hash]                       # (1) copy hash from branch you wanna move
+[ edit files as necessary ]                    # (2) checkout on branch which need that commit
+
+Example:
+
+# main (branch)
+commits:
+    - commit 1
+    - commit 2
+    - commit 3
+
+# primary (branch)
+    - pcommit 1
+    - pcommit 2
+
+Imagine I'm on [primary] branch
+After running -> git cherry-pick [commit 3<hash>]
+The current history of commit's will look like this:
+
+# main (branch)
+commits:
+    - commit 1
+    - commit 2
+    - commit 3
+
+# primary (branch)
+    - pcommit 1
+    - pcommit 2
+    - commit 3 (with new hash)

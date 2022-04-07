@@ -1,0 +1,54 @@
+*RESET*-------------------
+
+Always keep in mind, however, that using the reset command undoes all commits 
+that came after the one you returned to:
+
+*Locally*
+
+
+- override last commit
+
+$ git reset HEAD~                              # (1)
+[ edit files as necessary ]                    # (2)
+$ git add .                                    # (3)
+$ git commit -c ORIG_HEAD                      # (4)
+
+*Remote(pushed)*
+
+
+- override last commit
+
+$ git reset HEAD~                              # (1)
+[ edit files as necessary ]                    # (2)
+$ git add .                                    # (3)
+$ git commit -c ORIG_HEAD                      # (4)
+$ git push origin <branch_name> --force        # (5) - it will override pushed commit (change history)
+
+*REVERT*------------------------
+
+*Locally* + *Remote*
+
+- redo commit (created reverted commit)
+
+$ git revert [hash]                              # (1)
+[ edit files as necessary ]                            # (2)
+$ git revert --continue                                # (3) - creates additional commit to undo the selected one
+
+$ can push to your branch
+
+# ...
+# commit 1
+# BAD commit
+# commit 2
+# revert BAD commit
+# ...
+
+*Locally* + *Remote*
+
+**REBASE----------------------------
+
+changes history
+
+- remove commit from history
+
+$git rebase -i [hash]~

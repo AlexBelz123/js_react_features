@@ -1,0 +1,28 @@
+You need ti have different ssh keys to have access to certain repo!
+(to create ssh key run the command below)
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+
+**git config**-----------------------
+
+# Default GitHub
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+# Professional github alias
+Host github-pro
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_pro
+
+--------------------------------------
+
+  For local:
+  git config user.email 'john.doe@gmail.com'
+
+
+  Checkout this link:
+  https://github.com/ArnaudRinquin/blog/blob/master/2014-03-11-one-command-github-account-switch.md
