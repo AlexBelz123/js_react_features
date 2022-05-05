@@ -15,5 +15,9 @@ For example, if you want to change the 4th and the 5th latest commits, you would
 
 $ git rebase -i HEAD~5
 
+Choose commit you wanna edit (replace [pick] with [revord])
+
+then you can push with --force to override it
+
 
 replace <pick> with <reword>
