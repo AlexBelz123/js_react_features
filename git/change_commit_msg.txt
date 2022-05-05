@@ -1,0 +1,19 @@
+-last commit
+
+$ git commit --amend -m "New commit message"
+
+If pushed:
+
+$ git push --force-with-lease <repository> <branch>
+
+Changing old commits----------------
+
+Navigate to the repository containing the commit message you want to change.
+
+Type git rebase -i HEAD~N, where N is the number of commits to perform a rebase on. 
+For example, if you want to change the 4th and the 5th latest commits, you would type:
+
+$ git rebase -i HEAD~5
+
+
+replace <pick> with <reword>
