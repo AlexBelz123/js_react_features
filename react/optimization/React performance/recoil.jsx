@@ -1,5 +1,5 @@
 // Fix "perf death by a thousand cuts"
-// when you have component whick is reused many times
+// when you have component which is reused many times
 // Example: Grid Cell etc.
 
 import * as React from 'react';

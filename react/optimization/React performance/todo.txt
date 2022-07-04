@@ -1,3 +1,0 @@
-- add React Suspense (code splitting)
-- React.memo
- - useMemo, useCallback
